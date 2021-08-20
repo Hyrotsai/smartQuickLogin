@@ -2,7 +2,7 @@
 
 Prueba tecnica SmartQuick
 
-Presentado por: Luis Alfredo Rodriguz Simancas
+Presentado por: Luis Alfredo Rodriguez Simancas
 
 # Usuarios Login
 
