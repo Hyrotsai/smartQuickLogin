@@ -3,54 +3,26 @@
 }
 
 body {
-  padding-top: 250px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: white;
+  color: black;
   font-size: 12px;
   background-image: url(./edificios.jpg);
-  /* Para dejar la imagen de fondo centrada, vertical yhorizontalmente */
   background-position: center center;
-  /* Para que la imagen de fondo no se repita */
   background-repeat: no-repeat;
-  /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
   background-attachment: fixed;
-  /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
   background-size: cover;
 }
 
 form {
-  background: #111;
-  width: 50%;
-  margin: 30px auto;
+  background: rgba(71, 71, 71, 0.5);
+  width: 500px;
+  margin: 150px auto;
   border-radius: 0.4em;
   border: 1px solid #191919;
   overflow: hidden;
   position: relative;
   box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
-}
-
-form:after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 1px;
-  width: 100px;
-  left: 20%;
-  background: linear-gradient(left, #111, #444, #b6b6b8, #444, #111);
-  top: 0;
-}
-
-form:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 8px;
-  height: 5px;
-  border-radius: 50%;
-  left: 34%;
-  top: -7px;
-  box-shadow: 0 0 6px 4px #fff;
 }
 
 .inset {
@@ -85,7 +57,7 @@ form h1:after {
 }
 
 label {
-  color: #666;
+  color: rgb(255, 255, 255);
   display: block;
   padding-bottom: 9px;
 }
@@ -94,8 +66,8 @@ input[type="text"],
 input[type="password"] {
   width: 100%;
   padding: 8px 5px;
-  background: linear-gradient(#1f2124, #27292c);
-  border: 1px solid #222;
+  background: whitesmoke;
+  border: 1px solid white;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
   border-radius: 0.3em;
   margin-bottom: 20px;
@@ -105,7 +77,6 @@ label[for="remember"] {
   color: white;
   display: inline-block;
   padding-bottom: 0;
-  padding-top: 5px;
 }
 
 input[type="checkbox"] {
@@ -145,39 +116,15 @@ input[type="submit"] {
   font-size: 13px;
 }
 
-input[type="submit"]:hover {
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    inset 0 -10px 10px rgba(255, 255, 255, 0.1);
-}
-
-input[type="text"]:hover,
-input[type="password"]:hover,
-label:hover ~ input[type="text"],
-label:hover ~ input[type="password"] {
-  background: #27292c;
-}
-
-/*  
-
-
-                            MENU                                         
-
-
-
-*/
-* {
-  margin: 0px;
-  padding: 0px;
-}
+/* MENU */
 
 #barra-superior {
-  margin: auto;
   width: 100%;
-  background: #333333; /*Color de fondo de la barra*/
-  height: 40px; /*Anchura de la barra*/
-  border-bottom: 4px solid #adbcdc; /*Línea de debajo del menú, si no queréis borrad esta línea*/
-  position: fixed; /*Para que la barra se quede fija*/
-  z-index: 101; /*Para que la barra se quede fija*/
+  background: #333333;
+  height: 40px;
+  border-bottom: 4px solid #adbcdc;
+  font-size: 13px;
+  padding-bottom: 75px;
 }
 
 ul,
@@ -185,102 +132,44 @@ ol {
   list-style: none;
 }
 
-.menu > li {
+.icon {
   float: left;
+  overflow: auto;
+  width: 200px;
+  height: 200px;
+  font-size: xx-large;
 }
-
+.usuario {
+  float: right;
+  overflow: auto;
+}
+.rol {
+  float: right;
+  overflow: auto;
+}
 .menu {
   margin: 0 auto;
-  width: 1000px; /*Ancho del menú dentro de la barra, variaremos este valor hasta conseguir el que buscamos*/
+  width: 50%;
 }
 
 .menu li a {
-  color: #ffffff; /*Color de las letras de las pestañas*/
-  font: normal normal 10px Arial; /*Tamaño y tipografía de las                   pestañas*/
-  text-transform: uppercase; /*Para que esté en mayúsculas, sino borrad esta línea*/
-  letter-spacing: 2px; /*Espaciado entre caracteres, si no queréis borrad la línea*/
+  color: #ffffff;
+  text-transform: uppercase;
   text-decoration: none;
-  padding: 20px 5px;
-  display: block;
-  cursor: pointer;
+  padding: 20px;
 }
 
-.menu li a:hover {
-  color: #faefe6; /*Color de las pestañas al pasar el ratón por                 encima*/
-}
-
-.menu li i {
-  /*Esto es para los iconos sociales, si no los tenéis borrad este bloque*/
-  color: #ffffff; /*Color de los iconos sociales*/
-  font-size: 14px; /*Tamaño de los iconos sociales*/
-  padding: 0px 5px;
-}
-
-.menu li i:hover {
-  /*Esto es para los iconos sociales, si no los tenéis borrad este bloque*/
-  color: #faefe6; /*Color de los iconos sociales al pasar por                   encima*/
-}
-
-.menu li ul {
-  background-color: #f4f0f1; /*Color de fondo de las subpestañas*/
-  display: none;
-  position: absolute;
-  min-width: 140px;
-}
-
-.menu li ul a {
-  /*Si queréis que la letra sea igual que las                   pestañas, borrad esta línea*/
-  color: #666666; /*Color de las letras de las subpestañas*/
-  font: normal normal 10px ARIAL; /*Tamaño y tipografía de las                   subpestañas*/
-  text-transform: uppercase; /*Para que esté en mayúsculas, sino borrad la línea*/
-  letter-spacing: 2px; /*Espaciado entre caracteres, si no lo queréis borrad la línea*/
-}
-
-.menu li ul a:hover {
-  /*Si queréis que la letra sea igual que las              pestañas, borrad esta línea*/
-  color: #f9a799; /*Color de las letras de las subpestañas al pasar el ratón por encima*/
-}
-
-.menu li:hover > ul {
-  display: block;
-}
-
-.search-box {
-  /*Para cambiar la apariencia de la cajita*/
-  width: 15%; /*Tamaño de la caja entera*/
-  text-align: center;
-  padding: 5px 0; /*Altura de cajita*/
-  margin-left: 50px;
-  color: #333333; /*Color de las letras cuando escriba el usuario*/
-  border: 0px solid #cccccc; /*Tamaño, estilo y color del borde,si no queremos borde borrar la línea*/
-  background: #ffffff; /*Color de fondo*/
-  font: normal normal 11px Lato; /*Tamaño y tipografia de la palabra BUSCAR (o la que hayas escrito)*/
-  border-radius: 1px; /*Bordes redondeados, si no los quieres,
-                borrar esta línea*/
-}
-
-#buscar-top {
-  /*Para colocarla bien dentro de nuestra barra*/
-  margin-top: 15px; /*Variar para colocarlo bien de altura*/
-  margin-right: 170px; /*Variar para colocarlo bien a lo ancho*/
-}
-
-/*
-
-TABULADOR ////////////////////////////////////////////
-
-*/
-
-/* Style the tab */
+/*TABULADOR*/
 
 .tab {
-  opacity: 0;
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
-/* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;
   float: left;
@@ -289,53 +178,43 @@ TABULADOR ////////////////////////////////////////////
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  justify-content: center;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
 }
 
-/* Style the tab content */
-
 .tabcontent {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
   border-top: none;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
-/*
-
-
-TABLA
-
-*/
+.tabcontent2 {
+  display: none;
+  border-top: none;
+  margin: auto;
+  width: 50vh;
+  padding: 10px;
+}
 
 table,
 td,
 th {
   border: 1px solid #595959;
   border-collapse: collapse;
+  flex: auto;
 }
 td,
 th {
-  padding: 3px;
-  width: 30px;
-  height: 25px;
+  padding: auto;
+  width: 10vh;
+  height: 10vh;
 }
 th {
   background: #f0e6cc;
-  color: #60a571;
-}
-.even {
-  background: black;
-}
-.odd {
-  background: black;
+  color: black;
 }

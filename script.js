@@ -58,13 +58,16 @@ const button = function (e) {
   if (!currentAccount) return window.alert("Usuario no existe");
   if (+pass.value === currentAccount.pin) {
     if (currentAccount.rol === "Coordinador") {
-      //!Que haga cosas de coordinador
+      //!Rol Coordinador
+      user.value = "";
+      pass.value = "";
       userRol(currentAccount);
     }
     if (currentAccount.rol === "Administrador") {
-      //! Que haga cosas de administrador
-      //!form.setAttribute("hidden", true);
-      tab.style.opacity = 100;
+      //! Rol Administrador
+      user.value = "";
+      pass.value = "";
+      tab.removeAttribute("hidden");
       userRol(currentAccount);
       adminDo(getData());
     }
@@ -84,7 +87,6 @@ const userRol = function (user) {
   <li><a class="icon"> ${user?.rol === "Administrador" ? "🤵" : "🕵️‍♀️"}</a></li>
   <li><a class="usuario">${user?.name}</a></li>
   <li><a class="rol">${user?.rol}</a></li>
-  <li><input type="submit" class='logout' name="go" id="go" value="Logout"></li>
   </ul>
   `;
   barra.innerHTML = "";
@@ -167,10 +169,11 @@ const adminDo = async function (user) {
   });
 };
 //!Boton Log out
-logOut.addEventListener("click", function () {
+logOut.addEventListener("click", function (e) {
+  e.preventDefault();
   barra.setAttribute("hidden", true);
   tab.setAttribute("hidden", true);
   img.style.backgroundImage = "url(./edificios.jpg)";
-  form.setAttribute("hidden", false);
-  console.log("Prueba exitosa");
+  form.setAttribute("hidden", null);
+  form.removeAttribute("hidden");
 });

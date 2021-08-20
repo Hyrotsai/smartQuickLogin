@@ -22,14 +22,14 @@
         <h1><img src="logo.png"></h1>
         <div class="inset">
             <p>
-            <p>Ingreso</p>
-            <p>Bienvenido porfavor ingresa tu cuenta de SmartControl</p>
-            <label for="email">Ususario</label>
-            <input class="user" type="text" name="email" id="email">
+            <h2>Ingreso</h2>
+            <br>
+            <h3>Bienvenido, porfavor ingresa tu cuenta de SmartControl</h3>
+            <br>
+            <input class="user" type="text" name="email" id="email" placeholder="Usuario">
             </p>
             <p>
-                <label for="password">Contraseña</label>
-                <input class="pass" type="password" name="password" id="password">
+                <input class="pass" type="password" name="password" id="password" placeholder="Contraseña">
             </p>
             <p class="class">
                 <input type="checkbox" name="remember" id="remember">
@@ -38,15 +38,12 @@
         </div>
         <p class="p-container">
             <span>Forgot password ?</span>
+            <input type="submit" class='logout' name="go" id="out" value="Logout">
             <input type="submit" class='login' name="go" id="go" value="Log in">
         </p>
-        <p class="p-container">
-            <span></span>
-            <input type="submit" class='logout' name="go" id="go" value="Logout">
-        </p>
     </form>
-
-    <div class="tab">
+    <br>
+    <div hidden class="tab">
         <button class="tablinks" onclick="openTab(event, 'result')">Resultados</button>
         <button class="tablinks" onclick="openTab(event, 'resumen')">Resumen</button>
     </div>
@@ -80,7 +77,7 @@
         </table>
     </div>
 
-    <div id="resumen" class="tabcontent">
+    <div id="resumen" class="tabcontent2">
         <table>
             <tr>
                 <th class="gold">Oro 🥇</th>
