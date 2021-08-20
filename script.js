@@ -15,6 +15,8 @@ const form = document.querySelector(".form");
 const gold = document.querySelector(".gold");
 const silver = document.querySelector(".silver");
 const bronze = document.querySelector(".bronze");
+const tabContent = document.querySelectorAll(".tabcontent");
+const body = document.querySelector("body");
 
 //! Creacion de usuarios
 const account1 = {
@@ -176,4 +178,7 @@ logOut.addEventListener("click", function (e) {
   img.style.backgroundImage = "url(./edificios.jpg)";
   form.setAttribute("hidden", null);
   form.removeAttribute("hidden");
+  currentAccount = null;
+  tabContent[0].style.display = "none";
+  tabContent[1].style.display = "none";
 });
