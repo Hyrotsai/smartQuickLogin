@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <script type="defer" src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Prueba Tecnica SmartQuick</title>
+</head>
+
+<body>
+    <div hidden class="barra" id='barra-superior'>
+        <ul class='menu'>
+            <li><a class="icon">Aqui va el icono</a></li>
+            <li><a class="usuario">Aqui va el usuario</a></li>
+            <li><a class="rol">Aqui va el rol</a></li>
+        </ul>
+    </div>
+
+    <form class="form">
+        <h1><img src="logo.png"></h1>
+        <div class="inset">
+            <p>
+            <p>Ingreso</p>
+            <p>Bienvenido porfavor ingresa tu cuenta de SmartControl</p>
+            <label for="email">Ususario</label>
+            <input class="user" type="text" name="email" id="email">
+            </p>
+            <p>
+                <label for="password">Contraseña</label>
+                <input class="pass" type="password" name="password" id="password">
+            </p>
+            <p class="class">
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Recuerdame</label>
+            </p>
+        </div>
+        <p class="p-container">
+            <span>Forgot password ?</span>
+            <input type="submit" class='login' name="go" id="go" value="Log in">
+        </p>
+        <p class="p-container">
+            <span></span>
+            <input type="submit" class='logout' name="go" id="go" value="Logout">
+        </p>
+    </form>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'result')">Resultados</button>
+        <button class="tablinks" onclick="openTab(event, 'resumen')">Resumen</button>
+    </div>
+
+    <div id="result" class="tabcontent">
+        <table>
+            <tr>
+                <th>Atleta</th>
+                <th>Edad</th>
+                <th>Pais</th>
+                <th>Año</th>
+                <th>Fecha</th>
+                <th>Deporte</th>
+                <th>Oro</th>
+                <th>Plata</th>
+                <th>Bronce</th>
+                <th>Total</th>
+            </tr>
+            <tr class="tab1">
+                <th>Valor 1</th>
+                <th>Valor 2</th>
+                <th>Valor 3</th>
+                <th>Valor 4</th>
+                <th>Valor 5</th>
+                <th>Valor 6</th>
+                <th>Valor 7</th>
+                <th>Valor 8</th>
+                <th>Valor 9</th>
+                <th>Valor 10</th>
+            </tr>
+        </table>
+    </div>
+
+    <div id="resumen" class="tabcontent">
+        <table>
+            <tr>
+                <th class="gold">Oro 🥇</th>
+                <th class="silver">Plata 🥈</th>
+                <th class="bronze">Bronce 🥉</th>
+            </tr>
+            <tr class="tab2">
+                <th>Valor 1</th>
+                <th>Valor 2</th>
+                <th>Valor 3</th>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
